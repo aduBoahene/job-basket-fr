@@ -15,17 +15,14 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: ReactNode;
-  session: any;  // Adjust this type based on your session type
 }
 
-export default function RootLayout({ children, session }: RootLayoutProps) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
       <html lang="en">
       <body>
-      <SessionProviderWrapper session={session}>
 
         {children}
-        </SessionProviderWrapper>
 
       </body>
     </html>   
